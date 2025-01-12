@@ -4,132 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restoran Tradicionalne Srpske Kuhinje</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;  /* Traditional serif font */
+            line-height: 1.6;
+            color: #4B2E1D;  /* Dark Brown */
+            background-color: #F8F1E5;  /* Light beige background */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #8B0000;  /* Dark Red */
+            color: #FFF;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid #FFD700; /* Gold accent */
+        }
+
+        header h1 {
+            font-family: 'Brush Script MT', cursive;  /* Decorative font */
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #FFD700;  /* Gold hover effect */
+        }
+
+        .hero {
+            text-align: center;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: #FFF;
+            padding: 100px 20px;
+            background-size: cover;
+        }
+
+        .hero h2 {
+            font-family: 'Georgia', serif;
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #FFD700;  /* Gold button */
+            color: #333;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+        }
+
+        .hero .btn:hover {
+            background-color: #8B0000;  /* Dark red on hover */
+            color: #FFF;
+        }
+
+        section {
+            padding: 50px 20px;
+            background-color: #FFF;  /* White sections for contrast */
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #8B0000;
+            margin-bottom: 20px;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            border: 4px solid #8B0000; /* Red border */
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #F8F1E5;  /* Light beige background */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        form label {
+            margin: 15px 0 5px;
+            font-size: 18px;
+            font-family: 'Georgia', serif;
+        }
+
+        form input, form button {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        form button {
+            background: #8B0000;
+            color: #FFF;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form button:hover {
+            background: #FFD700;  /* Gold hover effect */
+        }
+
+        footer {
+            background: #8B0000;
+            color: #FFF;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 4px solid #FFD700;  /* Gold border on footer */
+        }
+
+        footer p {
+            font-size: 18px;
+        }
+
+        /* Added Folk Pattern Backgrounds */
+        .section-background {
+            background: url('serbian-folk-pattern.jpg') repeat;
+            padding: 40px;
+        }
+
+    </style>
 </head>
 <body>
-	
-	<style>
-	/* General Reset */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    background: #8B0000;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header h1 {
-    text-align: center;
-    margin: 0;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    text-align: center;
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    padding: 100px 20px;
-}
-
-.hero .btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: #FFD700;
-    color: #333;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-section {
-    padding: 50px 20px;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #8B0000;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form button {
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-form button {
-    background: #8B0000;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-footer {
-    background: #8B0000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-	</style>
-
-
-
     <header>
         <div class="container">
-            <h1>Dobrodošli u naš restoran!</h1>
+            <h1>Restoran Tradicionalne Srpske Kuhinje</h1>
             <nav>
                 <ul>
                     <li><a href="#pocetna">Početna</a></li>
@@ -152,7 +207,7 @@ footer {
     <section id="o-nama">
         <div class="container">
             <h2>O Nama</h2>
-            <p>Naša misija je da donesemo najbolje iz srpske kuhinje na vaš sto. Koristimo samo najkvalitetnije sastojke kako bismo očuvali autentičnost i tradiciju.</p>
+            <p>Naša misija je da donesemo najbolje iz srpske kuhinje na vaš sto. Koristimo samo najkvalitetnije sastojke kako bismo očuvali autentičnost i tradiciju. Uživajte u toploj atmosferi našeg restorana, koji je ukrašen srpskim folklornim detaljima i ručno izrađenim dekorima.</p>
         </div>
     </section>
 
@@ -168,7 +223,7 @@ footer {
         </div>
     </section>
 
-    <section id="galerija">
+    <section id="galerija" class="section-background">
         <div class="container">
             <h2>Galerija</h2>
             <p>Pregledajte fotografije naše hrane i atmosfere.</p>
