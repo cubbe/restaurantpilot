@@ -182,6 +182,112 @@
             padding: 40px;
         }
 
+
+
+
+
+/*TEST TEST TEST TEST*/
+
+	    /* General Responsive Rules */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Header Navigation */
+header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 10px 10px;
+}
+
+/* Responsive Hero Section */
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+    background-size: cover;
+}
+
+/* Responsive Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* Responsive Form */
+form {
+    padding: 10px;
+}
+
+form label, form input, form button {
+    width: 100%;
+}
+
+/* Media Queries for Specific Breakpoints */
+
+/* Small Devices (Phones) */
+@media screen and (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 900px) {
+    header nav ul {
+        flex-wrap: wrap;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
     </style>
 </head>
 <body>
